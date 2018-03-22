@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BarcodeLabelReport" pageWidth="252" pageHeight="72" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="188" leftMargin="14" rightMargin="14" topMargin="7" bottomMargin="7" uuid="aa329c3e-031d-423b-aa13-d24ae4e409c6">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="barcodeContent" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="barcodeDesc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="46">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField-2" positionType="Float" x="2" y="34" width="200" height="11" uuid="b403cce7-0b59-43d0-a8e3-b1279f981f13"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" size="12" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{barcodeDesc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField-2" positionType="Float" x="1" y="24" width="201" height="9" uuid="0ca4009a-908f-4db1-bb14-84f05d9efb51"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" size="12" isBold="true" pdfFontName="Times-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{barcodeContent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-1" positionType="Float" x="2" y="2" width="222" height="20" uuid="e3ab9ad2-d78e-4002-8fa1-8f7f988918ab"/>
+				<textElement rotation="None">
+					<font fontName="IDAutomationPDF417n4" size="10" isBold="true" pdfFontName="IDAutomationPDF417n3.ttf" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new IDautomationPDFE.PDF417Encoder().fontEncode($P{barcodeContent} + "-" + $P{barcodeDesc})]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

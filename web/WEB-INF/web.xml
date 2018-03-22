@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!--<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>-->
+
+	<!--
+	<servlet>
+		<servlet-name>ServletRedirector</servlet-name>
+		<servlet-class>
+			org.apache.cactus.server.ServletTestRedirector
+		</servlet-class>
+		<init-param>
+			<param-name>param1</param-name>
+			<param-value>value1 used for testing</param-value>
+		</init-param>
+	</servlet>
+	-->
+	
+	<!--<servlet>
+		<servlet-name>AutoEnroller</servlet-name>
+		<servlet-class>bers.enrollment.AutoEnroller</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>PrintLabel</servlet-name>
+		<servlet-class>bers.PrintLabel</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FundsAvail</servlet-name>
+		<servlet-class>bers.lumpsum.FundAvail</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>VoucherUpdate</servlet-name>
+		<servlet-class>bers.calculation.vouchers.VoucherUpdate</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>PlanCode</servlet-name>
+		<servlet-class>bers.enrollment.PlanCode</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ZipCodeLocator</servlet-name>
+		<servlet-class>bers.ZipCodeLocator</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RetireType</servlet-name>
+		<servlet-class>bers.calculation.RetireType</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SSNFinder</servlet-name>
+		<servlet-class>bers.SSNFinder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Options</servlet-name>
+		<servlet-class>bers.calculation.Options</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>VoucherType</servlet-name>
+		<servlet-class>bers.calculation.vouchers.VoucherType</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Downloader</servlet-name>
+		<servlet-class>bers.Downloader</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Reporter</servlet-name>
+		<servlet-class>bers.Reporter</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>PasswordReset</servlet-name>
+		<servlet-class>bers.PasswordReset</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>MemberStatementPDF</servlet-name>
+		<servlet-class>bers.statement.MemberStatementPDF</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>JRRetirePacket</servlet-name>
+		<servlet-class>bers.enrollment.BersRetirePacketForm</servlet-class>
+	</servlet>
+        
+        <servlet>
+		<servlet-name>ApptSurveyForm</servlet-name>
+		<servlet-class>bers.appointment.ApptSurveyForm</servlet-class>
+	</servlet>
+        
+        
+	<servlet>
+		<servlet-name>RegularPDFStmt</servlet-name>
+		<servlet-class>bers.statement.searchPDFServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>MandEnrollForms</servlet-name>
+		<servlet-class>bers.enrollment.BersMandEnrollForms</servlet-class>
+	</servlet>-->
+
+	<servlet>
+		<servlet-name>generateBarcodeServlet</servlet-name>
+		<servlet-class>barcodeGen.generateBarcodeServlet</servlet-class>
+	</servlet>
+        
+        <servlet>
+		<servlet-name>redirectBarcodeServlet</servlet-name>
+		<servlet-class>barcodeGen.redirectBarcodeServlet</servlet-class>
+	</servlet>
+
+	<!--<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>-->
+
+	<!--
+	<servlet-mapping>
+		<servlet-name>ServletRedirector</servlet-name>
+		<url-pattern>/ServletRedirector</url-pattern>
+	</servlet-mapping>
+	-->
+
+	<!--<servlet-mapping>
+		<servlet-name>AutoEnroller</servlet-name>
+		<url-pattern>/enrollment/AutoEnroller</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>PrintLabel</servlet-name>
+		<url-pattern>/PrintLabel</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FundsAvail</servlet-name>
+		<url-pattern>/lumpsum/FundsAvailable</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>VoucherUpdate</servlet-name>
+		<url-pattern>/calculation/VoucherUpdate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SSNFinder</servlet-name>
+		<url-pattern>/SSNFinder</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RetireType</servlet-name>
+		<url-pattern>/calculation/RetireType</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PlanCode</servlet-name>
+		<url-pattern>/enrollment/PlanCode</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ZipCodeLocator</servlet-name>
+		<url-pattern>/ZipCodeLocator</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Options</servlet-name>
+		<url-pattern>/calculation/Options</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Reporter</servlet-name>
+		<url-pattern>/Reporter</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PasswordReset</servlet-name>
+		<url-pattern>/PasswordReset</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>JRRetirePacket</servlet-name>
+		<url-pattern>/JRRetirePacket</url-pattern>
+	</servlet-mapping>
+       
+       <servlet-mapping>
+		<servlet-name>ApptSurveyForm</servlet-name>
+		<url-pattern>/ApptSurveyForm</url-pattern>
+	</servlet-mapping>
+              
+	<servlet-mapping>
+		<servlet-name>MandEnrollForms</servlet-name>
+		<url-pattern>/MandEnrollForms</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RegularPDFStmt</servlet-name>
+		<url-pattern>/RegularPDFStmt</url-pattern>
+	</servlet-mapping>-->
+        
+        <servlet-mapping>
+		<servlet-name>generateBarcodeServlet</servlet-name>
+		<url-pattern>/barcodeLabel</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>generateBarcodeServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+        
+        <servlet-mapping>
+		<servlet-name>redirectBarcodeServlet</servlet-name>
+		<url-pattern>/redirectBarcodeServlet</url-pattern>
+	</servlet-mapping>
+
+	<!--<servlet-mapping>
+		<servlet-name>Downloader</servlet-name>
+		<url-pattern>/Downloader</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>MemberStatementPDF</servlet-name>
+		<url-pattern>/MemberStatementPDF</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>VoucherType</servlet-name>
+		<url-pattern>/calculation/VoucherType</url-pattern>
+	</servlet-mapping>-->
+
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>
+	    barcodeGenPage.jsp
+		</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pageNotFound.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/generalError.jsp</location>
+	</error-page>
+	<!--<error-page>
+		<exception-type>bers.ReportException</exception-type>
+		<location>/generalError.jsp</location>
+	</error-page>-->
+
+	<!--<jsp-config>
+		<taglib>
+			<taglib-uri>http://jakarta.apache.org/struts/tags-bean</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/struts-bean.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://jakarta.apache.org/struts/tags-html</taglib-uri>
+			<taglib-location>/WEB-INF/tlds/struts-html.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+	<resource-ref>
+		<res-ref-name>java:jdbc/prod</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+	
+	<resource-ref>
+		<res-ref-name>java:jdbc/prutstw</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>-->
+
+	<!--
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+	-->
+</web-app>
